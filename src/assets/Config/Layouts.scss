@@ -1,0 +1,25 @@
+@import './Definitions';
+
+%root {
+    display: block;
+    width: $root-width;
+    min-width: $root-min-width;
+}
+
+%page {
+    display: block;
+    width: $page-width;
+    padding: $page-padding;
+
+    %body {
+        display: block;
+        margin: 0 auto;
+        width: $body-width;
+    }
+}
+
+%modal {
+    position: relative;
+    display: block;
+    width: $modal-width;
+}

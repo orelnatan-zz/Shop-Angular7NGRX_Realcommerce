@@ -1,0 +1,36 @@
+@import './src/assets/Config/Layouts';
+@import './src/assets/Config/Icons';
+@import './src/assets/Config/Colors';
+
+.page {
+    @extend %page;
+
+    .body {
+        @extend %body;
+    }
+
+    .product-view-viewer {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .product-view-details {
+        display: block;
+        padding: 0px 20px;
+        color: $color-white;
+        font-weight: 700;
+    }
+
+    .product-view-home {
+        display: block;
+        width: 100%;
+        text-align: end;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+
+        &:hover {
+            color: $color-sky;
+        }
+    }
+}

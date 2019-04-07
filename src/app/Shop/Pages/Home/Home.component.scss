@@ -1,0 +1,10 @@
+@import './src/assets/Config/Layouts';
+@import './src/assets/Config/Icons';
+
+.page {
+    @extend %page;
+
+    .body {
+        @extend %body;
+    }
+}

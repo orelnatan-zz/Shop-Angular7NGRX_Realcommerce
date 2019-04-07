@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import './src/assets/Config/Colors';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: HeeboRegular;
+    src: url('./assets/Fonts/HeeboRegular.ttf');
+}
+
+@font-face {
+  font-family: JennaSue;
+  src: url('./assets/Fonts/JennaSue.ttf');
+}
+
+body {
+    font-family: HeeboRegular;
+    background: $color-dark-gray;
+    direction: ltr;
+}
+

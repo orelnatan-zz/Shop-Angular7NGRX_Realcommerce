@@ -1,0 +1,22 @@
+
+<div class="products-list-main" >
+    <div *ngFor="let product of products">
+        <div [ngSwitch]="viewMode">
+            <div class="products-list-product" *ngSwitchCase="'grid'" >
+                <product-box 
+                    [product]="product"
+                    (updated)="onUpdate.emit($event)" 
+                    (selected)="onSelect.emit($event)">
+                </product-box>
+            </div>
+
+            <div class="products-list-product" *ngSwitchCase="'list'" >
+                <product-row 
+                    [product]="product"
+                    (updated)="onUpdate.emit($event)"  
+                    (selected)="onSelect.emit($event)">
+                </product-row>
+            </div>
+        </div>
+    </div>
+</div>

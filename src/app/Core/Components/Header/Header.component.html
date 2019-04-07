@@ -1,0 +1,31 @@
+
+<div class="header-main">
+    <section class="header-section">
+        <div class="header-container">
+            <span class="header-icon icon icon-stackoverflow" tooltip="All Products" placement="right" delay="500" selected="*" current="{{typeShown$ | async}}"  (click)="filterByType('*')"  > </span>
+            <span class="header-icon icon icon-play" tooltip="Movies" placement="bottom" delay="500" selected="movie" current="{{typeShown$ | async}}" (click)="filterByType('movie')" > </span>
+            <span class="header-icon icon icon-indent-increase" tooltip="Series" placement="bottom" delay="500" selected="series" current="{{typeShown$ | async}}" (click)="filterByType('series')" > </span>
+            <span class="header-icon icon icon-pacman" tooltip="Games" placement="bottom" delay="500" selected="game" current="{{typeShown$ | async}}" (click)="filterByType('game')" > </span>
+        </div>
+
+        <div class="header-container">
+            <span class="header-icon icon icon-menu" tooltip="List" placement="bottom" delay="500" selected="list" current="{{viewMode$ | async}}" (click)="view.emit('list')" > </span>
+            <span class="header-icon icon icon-table2" tooltip="Grid" placement="bottom" delay="500" selected="grid" current="{{viewMode$ | async}}" (click)="view.emit('grid')"> </span>
+        </div>
+
+        <div class="header-container">
+            <span class="header-icon icon icon-menu3" tooltip="Desc" placement="bottom" delay="500" selected="desc" current="{{sort$ | async}}" (click)="changeSortDirection('desc')" > </span>
+            <span class="header-icon icon icon-menu4" tooltip="Asc" placement="bottom" delay="500" selected="asc" current="{{sort$ | async}}" (click)="changeSortDirection('asc')" > </span>
+        </div>
+
+        <div class="header-container">
+            <span class="header-icon icon icon-spinner2" tooltip="Refresh" placement="bottom" delay="500" (click)="refresh.emit(); searchboxReference.reset()"> </span>
+        </div>
+    </section>
+
+    <section class="header-section">
+        <div class="header-search">
+            <search-box #searchboxReference (onChange)="filterByText($event)"> </search-box>
+        </div>  
+    </section>
+</div>

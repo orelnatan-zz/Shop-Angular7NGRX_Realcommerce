@@ -1,0 +1,11 @@
+@import './src/assets/Config/Layouts';
+@import './src/assets/Config/Colors';
+
+.page {
+    @extend %page;
+
+    .body {
+        @extend %body;
+        color: $color-white;
+    }
+}

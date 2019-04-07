@@ -1,0 +1,16 @@
+
+<div class="product-box-main" >
+    <div class="product-box-cover" [ngStyle]="{'background-image': 'url('+ product.Poster +')'}" (click)="selected.emit(product.imdbID)"> </div>
+    
+    <div class="product-box-details" >
+        <span class="product-box-detail product-box-title"  
+              (click)="$event.stopPropagation(); isEditable=true" 
+              *ngIf="!isEditable">{{product.Title}}
+        </span>
+        <input class="product-box-input-title" #inputReference 
+               value="{{product.Title}}" 
+               (click)="$event.stopPropagation()" 
+               [ngClass]="{'title-input-shown': isEditable}" />
+        <span class="product-box-detail product-box-date">{{product.Year | date: 'dd/mm/yyyy'}}</span>
+    </div>
+</div>

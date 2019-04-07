@@ -1,0 +1,25 @@
+
+<div class="page" *ngIf="(inProgress$ | async) == false">
+    <div class="body">
+        <span class="product-view-home icon icon-home2" (click)="navigateBackHome()"> </span>
+        <div class="product-view-viewer">
+            <div class="product-view-cover">
+                <img imgReference [src]="product?.Poster" (error)="showDefaultImage($event)" />
+            </div>
+            <div class="product-view-details">
+                <div class="product-view-detail">
+                    <span>Title:&emsp;{{product?.Title}}</span>
+                </div>
+                <div class="product-view-detail">
+                    <span>Date:&emsp;{{product?.Year | date: 'dd/mm/yyyy'}}</span>
+                </div>
+                <div class="product-view-detail">
+                    <span>Item ID:&emsp;{{product?.imdbID}}</span>
+                </div>
+                <div class="product-view-detail">
+                    <span>Item Type:&emsp;{{product?.Type}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>      

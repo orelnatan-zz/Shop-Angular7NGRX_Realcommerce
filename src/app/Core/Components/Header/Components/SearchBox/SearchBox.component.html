@@ -1,0 +1,10 @@
+
+<div class="search-box-main">
+    <span class="icon icon-search"> </span>
+    <input #boxReference class="search-box" 
+            type="text" 
+            placeholder="Search title or date ..."
+            [formControl]="value" />
+    <span class="search-box-clear icon icon-close" tooltip="Clear" placement="left" delay="500" (click)="clear()"> </span>
+</div>
+

@@ -1,0 +1,8 @@
+
+<error-alert *ngIf="(failure$ | async)"></error-alert>
+<loader *ngIf="(inProgress$ | async)"></loader>
+
+<div class="root">
+    <router-outlet> </router-outlet>
+</div>
+

@@ -1,0 +1,14 @@
+@import './src/assets/Config/Layouts';
+
+.products-list-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .products-list-product {
+        display: block;
+        margin-top: 10px;
+    }
+}

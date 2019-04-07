@@ -1,0 +1,63 @@
+@import './src/assets/Config/Colors';
+
+.product-row-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1024px;
+    height: 200px;
+    background: $color-mouse;
+    border: thin solid $color-black;
+
+    .product-row-image {
+        position: relative;
+        display: block;
+        width: 30%;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        background-image: url('../../../../../../../../assets/Images/image-not-available.jpg');
+    }
+
+    .product-row-cover {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .product-row-details {
+        display: block;
+        padding: 20px;
+        width: 30%;
+    }
+
+    .product-row-detail {
+        color: $color-white;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .product-row-title {
+        cursor: cell;
+    }
+
+    .product-row-input-title {
+        display: none;
+        border-style: none;
+        outline-style: none;
+        font-size: 14px;
+        font-weight: 700;
+        color: $color-white;
+        background: transparent;
+    }
+
+    &:hover {
+        border: thin solid $color-sky;
+    }
+}
+
+.title-input-shown {
+    display: block !important;
+}

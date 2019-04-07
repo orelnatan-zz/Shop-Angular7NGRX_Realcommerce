@@ -1,0 +1,17 @@
+
+<header
+   (load)="loadProducts($event)"
+   (view)="transformView($event)"
+   (refresh)="refreshData()" > 
+</header>
+
+<div class="page">
+    <div class="body">
+        <products-list 
+            [products]="allProducts$ | async"
+            [viewMode]="viewMode$ | async"
+            (onSelect)="navigateToProductPage($event)"
+            (onUpdate)="handleUpdate($event)" >
+         </products-list>
+    </div>
+</div>      

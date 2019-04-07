@@ -1,0 +1,29 @@
+@import './src/assets/Config/Colors';
+@import './src/assets/Config/Icons';
+@import '../../../../Directives/Tooltip/Tooltip.directive.scss';
+
+.search-box-main {
+    display: flex;
+    padding: 0px 8px 8px 5px;
+    border-bottom: 1px solid $color-white;
+    color: $color-white;
+    width: 100%;
+
+    .search-box {
+        display: block;
+        background: transparent;
+        border-style: none;
+        outline-style: none;
+        font-weight: bold;
+        color: $color-white;
+        padding-left: 6px;
+        width: 100%;
+    }
+
+    .search-box-clear {
+        cursor: pointer;
+        &:hover {
+            color: $color-sky;
+        }
+    }
+}
